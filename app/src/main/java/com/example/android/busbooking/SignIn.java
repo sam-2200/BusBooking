@@ -30,7 +30,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
-import com.google.firebase.ktx.Firebase;
+
+import java.io.Serializable;
+//import com.google.firebase.ktx.Firebase;
 
 public class SignIn extends AppCompatActivity  implements GoogleApiClient.OnConnectionFailedListener {
 
@@ -143,6 +145,8 @@ public class SignIn extends AppCompatActivity  implements GoogleApiClient.OnConn
 
     private void gotoProfile(){
         Intent intent=new Intent(this,Schedule.class);
+//         User user=new User(currentUser.getUid(),currentUser.getDisplayName(), currentUser.getEmail());
+//         intent.putExtra("User", (Serializable) user);
         startActivity(intent);
     }
 
